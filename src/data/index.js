@@ -4,7 +4,7 @@ import cocktailSlice from "./cocktailSlicer";
 
 const store = configureStore({
   reducer: combineReducers({
-    [cocktailApi.pathname]: cocktailApi.reducer,
+    [cocktailApi.reducerPath]: cocktailApi.reducer,
     [cocktailSlice.name]: cocktailSlice.reducer,
   }),
 });
