@@ -13,19 +13,21 @@ const App = () => {
 
   const cocktails = useMemo(
     () =>
-      data && (
+      data && data.drinks ? (
         <ul>
           {data.drinks.map((drink) => (
             <Cocktail key={drink.idDrink} {...drink} />
           ))}
         </ul>
+      ) : (
+        <h1>We don't know any drinks by that name. Are you drunk?</h1>
       ),
     [data]
   );
 
   return (
     <>
-      <main>
+      <main className={cocktailId ? "small" : undefined}>
         <FormInput />
         {isLoading && <p>Opening the bar</p>}
         {isError && <p>The bar is closed due to technical difficulties</p>}

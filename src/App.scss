@@ -1,0 +1,80 @@
+#root {
+  display: flex;
+  width: 98%;
+  margin: 0 auto;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+main {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    li {
+      list-style: none;
+      flex: 1 1 300px;
+      max-width: 357px;
+      h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+      .imgholder {
+        width: 100%;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &.small {
+    max-width: 65%;
+    ul {
+      li {
+        max-width: 270px;
+      }
+    }
+  }
+}
+.aside {
+  width: 30%;
+  position: relative;
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .imgholder {
+    width: 90%;
+    margin: 0 auto;
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+  ul:last-of-type {
+    list-style: decimal;
+  }
+  li {
+    text-transform: capitalize;
+  }
+}
